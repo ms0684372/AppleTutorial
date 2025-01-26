@@ -56,7 +56,7 @@ namespace AppleApp  // 自訂命名空間
 
 > public static void Main()
 > 宣告一個叫做Main的公開且靜態的方法
-> [!WARNING] Main是一個應用程式的入口點，他必須要是靜態的
+> <div> [!WARNING] Main是一個應用程式的入口點，他必須要是靜態的 </div>
 > 1. public：
 >    - 在宣告方法的時候，可加可不加，沒加存取修飾詞的話，預設會是private
 >    - 其他上面有提到了，就不重複講
