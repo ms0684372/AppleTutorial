@@ -1,28 +1,39 @@
 ## Lesson 2
 
-### 內建參考類型(基本變數類型)：
+### 基本變數類型：
 
 #### 字串類型
-##### char(value type):
+##### char (value type):
 | 型別 | 範圍              | 大小  |
 |:-----|:-----------------|:------|
 | char | U+0000 到 U+FFFF | 8 bit |
-##### string(reference type):
+##### string (reference type):
 1. 由多個char組成
 2. 一旦建立後即無法修改
 3. 若做運算，都將會回傳一個新的string
-
+```
+string a = "abc";
+string b = "cde";
+string c = a+b;
+Console.WriteLine("result:" + c);   //abccde
+```
 ---
 
-#### 布林(boolean)類型(value type)
+#### 布林(boolean)類型 (value type)
 ##### bool
 1. 用於判斷邏輯
 2. 只有 "true" 和 "false" 兩種結果
 3. 運算子: &&, ||, &, |  
-
+```
+bool result = 5 > 3
+if(result)
+    Console.WriteLine("true");
+else
+    Console.WriteLine("false");
+```
 ---
 
-#### 數字類型(value type)
+#### 數字類型 (value type)
 ##### 1. 整數類型(含正負號):
 
 | 型別   | 範圍                                                    | 大小   |
