@@ -26,6 +26,7 @@ Console.WriteLine("result:" + c);   //abccde
 2. 只有 "true" 和 "false" 兩種結果
 3. 運算子: &&, ||, &, |  
 ```
+宣告範例:
 bool result = 5 > 3
 if(result)
     Console.WriteLine("true");
@@ -45,10 +46,10 @@ else
 | long  | -9,223,372,036,854,775,808 至 9,223,372,036,854,775,807 | 64 bit |
 ```
 宣告範例:
-1.
+1.一般宣告
 int a = 1;
 
-2.(string to int)
+2.將string轉換成int
 string inputA = Console.ReadLine();
 int a = int.Parse(inputA);
 ```
