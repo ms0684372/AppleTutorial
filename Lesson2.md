@@ -24,14 +24,18 @@ Console.WriteLine("result:" + c);   //abccde
 ##### bool
 1. 用於判斷邏輯
 2. 只有 "true" 和 "false" 兩種結果
-3. 運算子: &&, ||, &, |  
+3. 運算子: &&, ||, &, |
+4. !會變成反向
 ```
 宣告範例:
+1.一般宣告，搭配if else使用
 bool result = 5 > 3
 if(result)
     Console.WriteLine("true");
 else
     Console.WriteLine("false");
+
+2.
 ```
 ---
 
