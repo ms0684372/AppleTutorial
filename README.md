@@ -31,6 +31,8 @@ namespace AppleApp  // 自訂命名空間
 1. ;(分號)：
    - C#中很重要的語法符號，用來定義語句的結尾，可以想成是句點，少了這個的話，編譯器會無法辨識哪裡是句尾
 
+---
+
 #### namespace AppleApp
 宣告一個叫做AppleApp的命名空間
 1. namespace：(可以不宣告，但是會變很亂)
@@ -39,6 +41,8 @@ namespace AppleApp  // 自訂命名空間
    - 自定義的命名空間名稱
 3. {}(大括號)：
    - C#中很重要的語法符號，用來定義範圍
+
+---
 
 #### public class Program
 宣告一個叫做Program的class，宣告class時一定要加存取修飾詞
@@ -54,6 +58,8 @@ namespace AppleApp  // 自訂命名空間
 3. Program：
    - 自定義的class名稱
 
+---
+
 #### public static void Main()
 宣告一個叫做Main的公開且靜態的方法
 ⚠️**警告:** Main是一個應用程式的入口點，他必須要是靜態的
@@ -66,6 +72,8 @@ namespace AppleApp  // 自訂命名空間
    - 回傳值，每個方法都一定要宣告回傳值，void代表沒有回傳東西
 4. Main：
    - 自定義方法名稱(Main不算)
+
+---
 
 #### Console.WriteLine("Hello, World!");
 > 輸出訊息，這是Console這個class的static方法
