@@ -12,6 +12,7 @@
 2. 一旦建立後即無法修改
 3. 若做運算，都將會回傳一個新的string
 ```
+宣告範例:
 string a = "abc";
 string b = "cde";
 string c = a + b;
@@ -42,6 +43,15 @@ else
 | short | -32,768 至 32,767                                       | 16 bit |
 | int   | -2,147,483,648 至 2,147,483,647                         | 32 bit |
 | long  | -9,223,372,036,854,775,808 至 9,223,372,036,854,775,807 | 64 bit |
+```
+宣告範例:
+1.
+int a = 1;
+
+2.(string to int)
+string inputA = Console.ReadLine();
+int a = int.Parse(inputA);
+```
    
 ##### 2. 整數類型(不含正負號):
 
@@ -59,6 +69,12 @@ else
 | float     | ±1.5 x 10^−45^ 到 ±3.4 x 10^38^    | ~6-9 位數    | 4 byte  | f |
 | double    | ±5.0 × 10^−324^ 至 ±1.7 × 10^308^  | ~15-17 位數  | 8 byte  | d |
 | decimal   | ±1.0 x 10^-28^ 到 ±7.9228 x 10^28^ | 28-29 位數   | 16 byte | m |
+```
+宣告範例:
+float f = 1.0f;
+double d = 1.0d;
+decimal m = 1.0m;
+```
 
 算數運算子:+, -, *, /
 
