@@ -1,6 +1,22 @@
-## Lesson 2
-
-### 基本變數類型：
+## Lesson 2-1 基本變數類型(一)：
+```
+C# 型別系統：
+├── 值型別（Value Type）
+│   ├── *整數型別（int, long, short, byte, sbyte, uint, ulong, ushort）
+│   ├── *浮點數型別（float, double, decimal）
+│   ├── *布林型別（bool）
+│   ├── *字元型別（char）
+│   ├── 結構（struct）
+│   ├── 列舉（enum）
+│
+└── 參考型別（Reference Type）
+    ├── *字串（string）
+    ├── 類別（class）
+    ├── 介面（interface）
+    ├── 陣列（array）
+    ├── 委派（delegate）
+    ├── 物件（object）
+```
 
 #### 字串類型
 ##### char (value type):
