@@ -53,9 +53,9 @@ byte b = (byte)i; //byte值域:0 ~ 255, b:0
 範例2:
 int a = 1;
 int i = a - 3;
-運算式: a - 3
-運算子: -
-運算元: a, 3
+運算式: a = 1, i = a - 3
+運算子: -, =
+運算元: a, 1, i, 3
 ```
 
 
@@ -97,7 +97,8 @@ int i = a - 3;
    int i = 2 * 5           //i: 10
 
    int i = 2.1f * 2        //錯誤寫法, 不能直接將float 指派給int
-   int i = (int)2.1f * 2;  //正確寫法, 先將float轉換成int，再進行運算，i = 4;
+   float f = 2.1f;
+   int i = (int)f * 2;     //正確寫法, 先將float轉換成int，再進行運算，i = 4;
 
    float f = 2 * 4;        //f: 8
    float f = 2.2f * 2;     //f: 4.4
@@ -112,7 +113,7 @@ int i = a - 3;
    float f1 = 5 / 2              //f1: 2，5跟2兩個運算元皆為int，所以小數點部分會被清除
    float f2 = 5f / 2;            //f2: 2.5
    float f3 = 5 / 2f;            //f3: 2.5
-   float f3 = (float)(5 / 2);    //f3: 2，5跟2為int，所以結果依舊是2
+   float f4 = (float)(5 / 2);    //f4: 2，算法同f1，5跟2為int，所以結果依舊是2
    ```
 
 ### 餘數(%)
@@ -137,3 +138,5 @@ int i = a - 3;
    int i = 1;        //i: 1
    int a = ++i;      //先計算遞增，再將i指派給a，a: 2, i:2
    ```
+
+### 關係運算子(Relational operators)(==, !=, <, >, <=, >=)
