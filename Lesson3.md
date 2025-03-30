@@ -161,9 +161,9 @@ int i = a - 3;
 | :-------  | :----------- | :---------------  | :---- | :-------- |
 |     &     |      AND     |        2 & 3      | False |  |
 |     \|    |      OR      |        2 \| 3     | True  |  |
-|     ^     |      XOR     |    True ^ True    | True  |  |
+|     ^     |      XOR     |    True ^ True    | False |  |
 |           |      XOR     |    True ^ False   | True  |  |
 |     !     |      NOT     |        !True      | False |  |
 |           |      NOT     |       !False      | True  |  |
 |     &&    |   快速AND    |  3 > 2 && 3 == 1  | False |  |
-|    \|\|   |   快速OR     | 3 > 2 \|\| 3 == 1 | False |  |
+|    \|\|   |   快速OR     | 3 > 2 \|\| 3 == 1 | True |  |
