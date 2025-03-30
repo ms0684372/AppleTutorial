@@ -159,8 +159,8 @@ int i = a - 3;
 ### 邏輯運算子(Logical operators)
 | 運算子符號 |     功能     |         範例       | 結果  |    備註   |
 | :-------  | :----------- | :---------------  | :---- | :-------- |
-|     &     |      AND     |        2 & 3      | False |  |
-|     \|    |      OR      |        2 \| 3     | True  |  |
+|     &     |      AND     |    True & False   | False |  |
+|     \|    |      OR      |    True \| False  | True  |  |
 |     ^     |      XOR     |    True ^ True    | False |  |
 |           |      XOR     |    True ^ False   | True  |  |
 |     !     |      NOT     |        !True      | False |  |
