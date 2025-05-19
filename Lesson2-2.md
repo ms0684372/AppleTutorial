@@ -1,71 +1,44 @@
-## Lesson 2-2 基本變數類型(二)：
+## Lesson 2-2 型別轉換
 
+## 型別轉換
+區分為兩種
+- 隱含轉換(Implicit Conversion)
+- 強制轉換(Explicit Conversion)
+
+### 隱含轉換(Implicit Conversion)
+值域小的轉為值域大的型別，稱為自動轉換或轉型(Convert)
 ```
-C# 型別系統：
-├── 值型別（Value Type）
-│   ├── 整數型別（int, long, short, byte, sbyte, uint, ulong, ushort）
-│   ├── 浮點數型別（float, double, decimal）
-│   ├── 布林型別（bool）
-│   ├── 字元型別（char）
-│   ├── *結構（struct）
-│   ├── 列舉（enum）
-│
-└── 參考型別（Reference Type）
-    ├── *類別（class）
-    ├── 介面（interface）
-    ├── 陣列（array）
-    ├── 字串（string）
-    ├── 委派（delegate）
-    ├── 物件（object）
+short s = 100;
+int i = s;
 ```
 
-#### struct(結構體) (Value Type)
-- 可否繼承:不能被繼承，只能實作interface
-- 賦值:複製整個值(不影響原物件)
-- 可否變更內容:不建議變更，建議在建構時就賦值
-- 適用場合:小型物件，短生命週期的資料
-
-##### 範例
-``` C#
-public struct Vector2
-{
-    public float x;
-    public float y;
-}
-
-Vector2 a = new Vector2();
-a.x = 10;
-a.y = 20;
-
-Vector2 b = a;
-b.x = 11;
-
-Console.WriteLine("a.x:" + a.x.ToString() + ", b.x:" + b.x.ToString() + b.x );
-//輸出結果 a.x:10, b.x:11，a、b各自獨立，所以b改變後，a不會被影響
+### 強制轉換(Explicit Conversion)
+值域大轉值域小，或不同值域之間的轉換，稱為強制轉換或鑄型(Cast)
+```
+語法: 變數1 = (變數的型態)變數2;
 ```
 
-#### class(類別) (Reference Type)
-- 可否繼承:支援繼承（可繼承其他 class）
-- 賦值:複製物件記憶體位址(共用物件)
-- 可否變更內容:可變動
-- 適用場合:大型物件，長期存活的資料
+```
+錯誤寫法:
+int i = 20;
+short a = i; //Error，short值域比int小
 
-##### 範例
-``` C#
-public class Person
-{
-    public string name;
-    public int age;
-}
+正確寫法
+int i = 20;
+short a = (short)i;  //a: 20
+```
 
-Person personA = new Person();
-personA.name = "Apple";
-personA.age = 10;
+##### 強制轉換的風險
+- 可能造成資料流失或溢位
 
-Person personB = personA;
-personB.age = 20;
+資料流失:浮點數轉整數後，小數點之後會直接捨棄
+```
+float f = 2.5f;
+int i = (int)f;   //i: 2
+```
 
-//因為這兩個指到同一個記憶體位址，所以會影響到彼此
-Console.WriteLine("A age:" + personA.age);  //20
-Console.WriteLine("B age:" + personB.age);  //20
+溢位:超出值域
+```
+int i = 256;
+byte b = (byte)i; //byte值域:0 ~ 255, b:0
 ```
